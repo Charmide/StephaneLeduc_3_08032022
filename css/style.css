@@ -1,5 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&family=Shrikhand&display=swap');
 :root {
     --primaire:#9356DC;
     --secondaire: #FF79DA;
     --tertiaire: #99E2D0;
+}
+
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body {
+    margin: 0px;
+    font-family: "roboto" ,sans-serif;  
+}
+
+main {
+    margin: 0px;
+    padding: 0px ;
+  }
+@media (max-width: 1000px) {
+main {
+    padding: 0px;
+    margin: 0px;
+    }
+}
+/* HEADER */
+header {
+    font-family: 'Shrikhand', cursive ,sans-serif;
+    text-align: center;
+    box-shadow: 0px 0px 8px rgb(0 0 0 / 25%);
+    padding: 5px;
+    position: relative;
+    }
+  
+main .local {
+    display: flex;
+    justify-content: center;
+    background-color: #edeaea;
+    text-align: center;
+    padding: 24px;
+    gap: 16px;
+    font-size: 20px;
+}
+/* PURPOSE */
+main .purpose {
+    text-align: center;
+    background-color: #F3F3F3;
+    padding: 24px;
+}
+.purpose__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.purpose__subtitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.purpose__btn{
+    color: white;
+    font-weight: 300;
+    font-size: 24px;
+    padding: 16px 32px;
+    border: none;
+    border-radius: 32px;
+    transition: transform 200ms;
+    margin-top: 16px;
+    cursor: pointer;
+    box-shadow: 2px 1px 8px -3px #7e7e7e;
+    background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+    font-size: 16px;
+}
+.purpose__btn:hover {
+    transform: scale(1.02);
+    opacity: 0.9;
+}
+
+/* TUTO */
+.tuto {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 32px;  
+}
+.tuto ol {
+    display: flex;
+    flex-wrap: wrap;
+    counter-reset: steps;
+}
+.tuto li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    background-color: #f6f6f6;
+    padding: 24px 32px;
+    flex-grow: 1;
+    border-radius: 16px;
+    box-shadow: 2px 1px 8px -3px #7e7e7e;
+}
+.tuto li::before {
+    background-color: #9356dc;
+    border-radius: 50%;
+    color: #fff;
+    content: counter(steps);
+    counter-increment: steps;
+    display: grid;
+    height: 32px;
+    left: -16px;
+    place-items: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px;
+}
+.tuto li:hover {
+    transform: scale(1.02);
+    background-color: #f2eafb;
+}
+.tuto li i.fas {
+    margin-right: 16px;
+    color: #7e7e7e;
+    font-size: 24px;
+}
+.tuto__steps{
+    display: flex;
+    gap: 16px;
+    display: inline-flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    
+}
+.tuto__step{
+    background-color:#F6F6F6;
+    padding: 16px 32px;
+    border-radius: 16px;
+    gap: 32px;
+    box-shadow: 0px 0px 8px rgb(0 0 0 / 25%);
+
+    
+}
+
+@media (max-width: 1200px) {
+.tuto ol {
+    flex-direction: column;
+    }
+}
+/* RESTAURANTS */
+.container1 {
+    background-color: #F3F3F3;
+}
+.restaurants__title {
+    text-align: center;
+}
+/* CARDS */
+.card {
+    display:flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0px 0px 8px rgb(0 0 0 / 25%);
+}
+.a {
+    background: cover;
+}
+.card__img{
+    background-position: 50%;
+    object-fit: cover;
+    border-radius: 16px 16px 0px 0px;
+    height: 210px;
+    
+    
+}
+.card__footer{
+    background-color: white;
+    color: black;
+}
+.container1 {
+    flex-basis: 100%;
+}
+.card__badge {
+    background-color: #99e2d0;
+    color: #1b6150;
+    padding: 8px;
+    border-radius: 2px;
+    position: absolute;
+    right: 16px;
+    top: 8px;
+}
+.card__btn .fas:hover {
+    opacity: 1;
+    transform:scale(1.2);
+    background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+    position: absolute;
+
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #353535;
+    padding: 16px 32px;
+    color:white;
+}
+.footer__logo {
+    font-family: 'Shrikhand',sans-serif;
+    font-weight: 500;
+    padding: 16px 0px;
+}
+.footer__list {
+    padding: 4px;
+    text-decoration: none;
+    list-style: none;
+}
+.footer__link{
+    color: #F3F3F3;
 }
